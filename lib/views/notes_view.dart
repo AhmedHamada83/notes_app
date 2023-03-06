@@ -32,12 +32,12 @@ class AddNoteBottom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // ignore: avoid_unnecessary_containers
-    return  Container(
+    return Container(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: SingleChildScrollView(
           child: Column(
-            children:const [
+            children: const [
               SizedBox(
                 height: 24,
               ),
@@ -52,7 +52,7 @@ class AddNoteBottom extends StatelessWidget {
                 height: 10,
               ),
               CustomButton(),
-               SizedBox(
+              SizedBox(
                 height: 10,
               ),
             ],
