@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'widgets/CustomTextFiled.dart';
 import 'widgets/Notes_view.dart';
 
 class NotesView extends StatelessWidget {
@@ -11,6 +12,7 @@ class NotesView extends StatelessWidget {
         onPressed: () {
           showModalBottomSheet(
             shape: RoundedRectangleBorder(
+              
               borderRadius: BorderRadius.circular(16)
             ),
                 context: context, 
@@ -31,6 +33,14 @@ class AddNoteBottom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Column(
+        children: [
+          SizedBox(height: 24,),
+        CustomTextFiled(),
+          ],),
+      ),);
   }
 }
