@@ -1,7 +1,9 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 class CustomSearch extends StatelessWidget {
-  const CustomSearch({ required this.icon});
+  const CustomSearch({super.key,  required this.icon});
 
   final IconData icon;
 

@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
@@ -25,7 +27,7 @@ class CustomTextFiled extends StatelessWidget {
       cursorColor: kpimaryColor,
       decoration: InputDecoration(
         hintText: hint,
-        hintStyle: TextStyle(color: kpimaryColor),
+        hintStyle:const TextStyle(color: kpimaryColor),
         border: OutLine(),
         enabledBorder: OutLine(),
         focusedBorder: OutLine(kpimaryColor),
