@@ -4,13 +4,23 @@ import '../../constants.dart';
 
 class CustomTextFiled extends StatelessWidget {
   // ignore: use_key_in_widget_constructors
-  const CustomTextFiled({ required this.hint,  this.maxLines});
+  const CustomTextFiled({ required this.hint,  this.maxLines, this.onSaved});
 
   final String hint;
   final int? maxLines;
+  final Function(String?)? onSaved;
+  
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      onSaved: onSaved,
+      validator: (value) {
+  if (value?.isEmpty ?? true) {
+    return 'Field is requared';
+  } else {
+    return null;
+  }
+      },
       maxLines: maxLines,
       cursorColor: kpimaryColor,
       decoration: InputDecoration(
