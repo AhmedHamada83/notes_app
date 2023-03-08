@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:bloc/bloc.dart';
+
 
 import 'Model/Note_model.dart';
 import 'constants.dart';
