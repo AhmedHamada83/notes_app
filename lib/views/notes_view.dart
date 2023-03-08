@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'widgets/AddNoteForm.dart';
+import 'package:notesapp/views/widgets/addNote.dart';
+
 import 'widgets/Notes_view.dart';
 
 class NotesView extends StatelessWidget {
@@ -22,21 +23,6 @@ class NotesView extends StatelessWidget {
         child: const Icon(Icons.add),
       ),
       body: const NotesAppBody(),
-    );
-  }
-}
-
-class AddNoteBottom extends StatelessWidget {
-  const AddNoteBottom({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    // ignore: avoid_unnecessary_containers
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16),
-      child: SingleChildScrollView(
-        child: AddNoteForm(),
-      ),
     );
   }
 }

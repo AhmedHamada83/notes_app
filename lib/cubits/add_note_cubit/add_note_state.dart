@@ -9,7 +9,7 @@ class AddNoteCubitLoading extends AddNoteCubitState {}
 class AddNoteCubitSuccess extends AddNoteCubitState {}
 class AddNoteCubitFailure extends AddNoteCubitState {
   final String errorMassage;
-  AddNoteCubitFailure({
-    required this.errorMassage,
-  });
+  AddNoteCubitFailure(
+     this.errorMassage,
+  );
 }
