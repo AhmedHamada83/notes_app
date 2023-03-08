@@ -6,37 +6,37 @@ import '../../constants.dart';
 
 class CustomTextFiled extends StatelessWidget {
   // ignore: use_key_in_widget_constructors
-  const CustomTextFiled({ required this.hint,  this.maxLines, this.onSaved});
+  const CustomTextFiled({required this.hint, this.maxLines, this.onSaved});
 
   final String hint;
   final int? maxLines;
   final Function(String?)? onSaved;
-  
+
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       onSaved: onSaved,
       validator: (value) {
-  if (value?.isEmpty ?? true) {
-    return 'Field is requared';
-  } else {
-    return null;
-  }
+        if (value?.isEmpty ?? true) {
+          return 'Field is required';
+        } else {
+          return null;
+        }
       },
       maxLines: maxLines,
       cursorColor: kpimaryColor,
       decoration: InputDecoration(
         hintText: hint,
-        hintStyle:const TextStyle(color: kpimaryColor),
-        border: OutLine(),
-        enabledBorder: OutLine(),
-        focusedBorder: OutLine(kpimaryColor),
+        hintStyle: const TextStyle(color: kpimaryColor),
+        border: OutLineInputBorder(),
+        enabledBorder: OutLineInputBorder(),
+        focusedBorder: OutLineInputBorder(kpimaryColor),
       ),
     );
   }
 
   // ignore: non_constant_identifier_names
-  OutlineInputBorder OutLine([color]) {
+  OutlineInputBorder OutLineInputBorder([color]) {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(8),
       borderSide: BorderSide(

@@ -12,7 +12,8 @@ class NotesView extends StatelessWidget {
         onPressed: () {
           showModalBottomSheet(
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(16)),
+                borderRadius: BorderRadius.circular(16),
+              ),
               context: context,
               builder: (context) {
                 return const AddNoteBottom();
@@ -31,12 +32,11 @@ class AddNoteBottom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // ignore: avoid_unnecessary_containers
-    return  const Padding(
-      padding:  EdgeInsets.symmetric(horizontal: 16),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16),
       child: SingleChildScrollView(
         child: AddNoteForm(),
       ),
     );
   }
 }
-
