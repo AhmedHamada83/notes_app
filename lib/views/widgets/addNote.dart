@@ -8,17 +8,23 @@ import 'AddNoteForm.dart';
 
 class AddNoteBottom extends StatelessWidget {
   const AddNoteBottom({super.key});
-  final  isLoading=true;
+  final isLoading = true;
   @override
   Widget build(BuildContext context) {
     // ignore: avoid_unnecessary_containers
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: ModalProgressHUD(
-        inAsyncCall: isLoading,
+        inAsyncCall: State is AddNoteCubitLoading ? true : false,
         child: BlocConsumer<AddNoteCubitCubit, AddNoteCubitState>(
           listener: (context, state) {
-          
+            if (state is AddNoteCubitFailure) {
+              print('failed {$state.errorMassage}');
+            }
+
+            if (state is AddNoteCubitSuccess) {
+              Navigator.pop(context);
+            }
           },
           builder: (context, state) {
             return SingleChildScrollView(child: AddNoteForm());
