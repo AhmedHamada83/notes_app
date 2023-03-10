@@ -11,7 +11,7 @@ import 'package:hive_flutter/hive_flutter.dart';
 void main() async {
   await Hive.initFlutter();
   Bloc.observer = SimpleBlocObserve();
-   Hive.registerAdapter(NoteModelAdapter());
+  Hive.registerAdapter(NoteModelAdapter());
   await Hive.openBox<NoteModel>(kNotesBox);
  
   runApp(const NotesApp());
